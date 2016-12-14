@@ -1,0 +1,505 @@
+<style type="text/css">
+#kohana_error { background: #ddd; font-size: 1em; font-family:sans-serif; text-align: left; color: #111; }
+#kohana_error h1,
+#kohana_error h2 { margin: 0; padding: 1em; font-size: 1em; font-weight: normal; background: #911; color: #fff; }
+	#kohana_error h1 a,
+	#kohana_error h2 a { color: #fff; }
+#kohana_error h2 { background: #222; }
+#kohana_error h3 { margin: 0; padding: 0.4em 0 0; font-size: 1em; font-weight: normal; }
+#kohana_error p { margin: 0; padding: 0.2em 0; }
+#kohana_error a { color: #1b323b; }
+#kohana_error pre { overflow: auto; white-space: pre-wrap; }
+#kohana_error table { width: 100%; display: block; margin: 0 0 0.4em; padding: 0; border-collapse: collapse; background: #fff; }
+	#kohana_error table td { border: solid 1px #ddd; text-align: left; vertical-align: top; padding: 0.4em; }
+#kohana_error div.content { padding: 0.4em 1em 1em; overflow: hidden; }
+#kohana_error pre.source { margin: 0 0 1em; padding: 0.4em; background: #fff; border: dotted 1px #b7c680; line-height: 1.2em; }
+	#kohana_error pre.source span.line { display: block; }
+	#kohana_error pre.source span.highlight { background: #f0eb96; }
+		#kohana_error pre.source span.line span.number { color: #666; }
+#kohana_error ol.trace { display: block; margin: 0 0 0 2em; padding: 0; list-style: decimal; }
+	#kohana_error ol.trace li { margin: 0; padding: 0; }
+.js .collapsed { display: none; }
+</style>
+<script type="text/javascript">
+document.documentElement.className = document.documentElement.className + ' js';
+function koggle(elem)
+{
+	elem = document.getElementById(elem);
+
+	if (elem.style && elem.style['display'])
+		// Only works with the "style" attr
+		var disp = elem.style['display'];
+	else if (elem.currentStyle)
+		// For MSIE, naturally
+		var disp = elem.currentStyle['display'];
+	else if (window.getComputedStyle)
+		// For most other browsers
+		var disp = document.defaultView.getComputedStyle(elem, null).getPropertyValue('display');
+
+	// Toggle the state of the "display" style
+	elem.style.display = disp == 'block' ? 'none' : 'block';
+	return false;
+}
+</script>
+<div id="kohana_error">
+	<h1><span class="type">Kohana_Exception [ 0 ]:</span> <span class="message">Directory APPPATH/cache must be writable</span></h1>
+	<div id="error585122fa9e70b" class="content">
+		<p><span class="file">SYSPATH/classes/kohana/core.php [ 283 ]</span></p>
+		<pre class="source"><code><span class="line"><span class="number">278</span> 			Kohana::$cache_dir = APPPATH.'cache';
+</span><span class="line"><span class="number">279</span> 		}
+</span><span class="line"><span class="number">280</span> 
+</span><span class="line"><span class="number">281</span> 		if ( ! is_writable(Kohana::$cache_dir))
+</span><span class="line"><span class="number">282</span> 		{
+</span><span class="line highlight"><span class="number">283</span> 			throw new Kohana_Exception('Directory :dir must be writable',
+</span><span class="line"><span class="number">284</span> 				array(':dir' =&gt; Debug::path(Kohana::$cache_dir)));
+</span><span class="line"><span class="number">285</span> 		}
+</span><span class="line"><span class="number">286</span> 
+</span><span class="line"><span class="number">287</span> 		if (isset($settings['cache_life']))
+</span><span class="line"><span class="number">288</span> 		{
+</span></code></pre>		<ol class="trace">
+					<li>
+				<p>
+					<span class="file">
+													<a href="#error585122fa9e70bsource0" onclick="return koggle('error585122fa9e70bsource0')">APPPATH/bootstrap.php [ 116 ]</a>
+											</span>
+					&raquo;
+					Kohana_Core::init(<a href="#error585122fa9e70bargs0" onclick="return koggle('error585122fa9e70bargs0')">arguments</a>)
+				</p>
+								<div id="error585122fa9e70bargs0" class="collapsed">
+					<table cellspacing="0">
+											<tr>
+							<td><code>0</code></td>
+							<td><pre><small>array</small><span>(2)</span> <span>(
+    "base_url" => <small>string</small><span>(1)</span> "/"
+    "index_file" => <small>string</small><span>(0)</span> ""
+)</span></pre></td>
+						</tr>
+										</table>
+				</div>
+													<pre id="error585122fa9e70bsource0" class="source collapsed"><code><pre class="source"><code><span class="line"><span class="number">111</span> Kohana::init(array(
+</span><span class="line"><span class="number">112</span>     'base_url'   =&gt; '/',
+</span><span class="line"><span class="number">113</span>     'index_file' =&gt; ''
+</span><span class="line"><span class="number">114</span> 
+</span><span class="line"><span class="number">115</span> 
+</span><span class="line highlight"><span class="number">116</span> ));
+</span><span class="line"><span class="number">117</span> 
+</span><span class="line"><span class="number">118</span> /**
+</span><span class="line"><span class="number">119</span>  * Attach the file write to logging. Multiple writers are supported.
+</span><span class="line"><span class="number">120</span>  */
+</span><span class="line"><span class="number">121</span> Kohana::$log-&gt;attach(new Log_File(APPPATH.'logs'));
+</span></code></pre></code></pre>
+							</li>
+								<li>
+				<p>
+					<span class="file">
+													<a href="#error585122fa9e70bsource1" onclick="return koggle('error585122fa9e70bsource1')">DOCROOT/index.php [ 128 ]</a>
+											</span>
+					&raquo;
+					require(<a href="#error585122fa9e70bargs1" onclick="return koggle('error585122fa9e70bargs1')">arguments</a>)
+				</p>
+								<div id="error585122fa9e70bargs1" class="collapsed">
+					<table cellspacing="0">
+											<tr>
+							<td><code>0</code></td>
+							<td><pre><small>string</small><span>(42)</span> "/Users/zhuguojie/study/st/v5/bootstrap.php"</pre></td>
+						</tr>
+										</table>
+				</div>
+													<pre id="error585122fa9e70bsource1" class="source collapsed"><code><pre class="source"><code><span class="line"><span class="number">123</span> {
+</span><span class="line"><span class="number">124</span> 	define('KOHANA_START_MEMORY', memory_get_usage());
+</span><span class="line"><span class="number">125</span> }
+</span><span class="line"><span class="number">126</span> 
+</span><span class="line"><span class="number">127</span> // Bootstrap the application
+</span><span class="line highlight"><span class="number">128</span> require APPPATH.'bootstrap'.EXT;
+</span><span class="line"><span class="number">129</span> require("api/update.php");
+</span><span class="line"><span class="number">130</span> if (PHP_SAPI == 'cli') // Try and load minion
+</span><span class="line"><span class="number">131</span> {
+</span><span class="line"><span class="number">132</span> 	class_exists('Minion_Task') OR die('Please enable the Minion module for CLI support.');
+</span><span class="line"><span class="number">133</span> 	set_exception_handler(array('Minion_Exception', 'handler'));
+</span></code></pre></code></pre>
+							</li>
+							</ol>
+	</div>
+	<h2><a href="#error585122fa9e70benvironment" onclick="return koggle('error585122fa9e70benvironment')">Environment</a></h2>
+	<div id="error585122fa9e70benvironment" class="content collapsed">
+				<h3><a href="#error585122fa9e70benvironment_included" onclick="return koggle('error585122fa9e70benvironment_included')">Included files</a> (24)</h3>
+		<div id="error585122fa9e70benvironment_included" class="collapsed">
+			<table cellspacing="0">
+								<tr>
+					<td><code>DOCROOT/index.php</code></td>
+				</tr>
+								<tr>
+					<td><code>APPPATH/bootstrap.php</code></td>
+				</tr>
+								<tr>
+					<td><code>SYSPATH/classes/kohana/core.php</code></td>
+				</tr>
+								<tr>
+					<td><code>SYSPATH/classes/kohana.php</code></td>
+				</tr>
+								<tr>
+					<td><code>SYSPATH/classes/i18n.php</code></td>
+				</tr>
+								<tr>
+					<td><code>SYSPATH/classes/kohana/i18n.php</code></td>
+				</tr>
+								<tr>
+					<td><code>SYSPATH/classes/http.php</code></td>
+				</tr>
+								<tr>
+					<td><code>SYSPATH/classes/kohana/http.php</code></td>
+				</tr>
+								<tr>
+					<td><code>APPPATH/classes/kohana/exception.php</code></td>
+				</tr>
+								<tr>
+					<td><code>SYSPATH/classes/kohana/kohana/exception.php</code></td>
+				</tr>
+								<tr>
+					<td><code>SYSPATH/classes/debug.php</code></td>
+				</tr>
+								<tr>
+					<td><code>SYSPATH/classes/kohana/debug.php</code></td>
+				</tr>
+								<tr>
+					<td><code>APPPATH/i18n/ch.php</code></td>
+				</tr>
+								<tr>
+					<td><code>SYSPATH/classes/request.php</code></td>
+				</tr>
+								<tr>
+					<td><code>SYSPATH/classes/kohana/request.php</code></td>
+				</tr>
+								<tr>
+					<td><code>SYSPATH/classes/http/request.php</code></td>
+				</tr>
+								<tr>
+					<td><code>SYSPATH/classes/kohana/http/request.php</code></td>
+				</tr>
+								<tr>
+					<td><code>SYSPATH/classes/http/message.php</code></td>
+				</tr>
+								<tr>
+					<td><code>SYSPATH/classes/kohana/http/message.php</code></td>
+				</tr>
+								<tr>
+					<td><code>SYSPATH/views/kohana/error.php</code></td>
+				</tr>
+								<tr>
+					<td><code>SYSPATH/classes/html.php</code></td>
+				</tr>
+								<tr>
+					<td><code>SYSPATH/classes/kohana/html.php</code></td>
+				</tr>
+								<tr>
+					<td><code>SYSPATH/classes/utf8.php</code></td>
+				</tr>
+								<tr>
+					<td><code>SYSPATH/classes/kohana/utf8.php</code></td>
+				</tr>
+							</table>
+		</div>
+				<h3><a href="#error585122fa9e70benvironment_loaded" onclick="return koggle('error585122fa9e70benvironment_loaded')">Loaded extensions</a> (57)</h3>
+		<div id="error585122fa9e70benvironment_loaded" class="collapsed">
+			<table cellspacing="0">
+								<tr>
+					<td><code>Core</code></td>
+				</tr>
+								<tr>
+					<td><code>date</code></td>
+				</tr>
+								<tr>
+					<td><code>ereg</code></td>
+				</tr>
+								<tr>
+					<td><code>libxml</code></td>
+				</tr>
+								<tr>
+					<td><code>openssl</code></td>
+				</tr>
+								<tr>
+					<td><code>pcre</code></td>
+				</tr>
+								<tr>
+					<td><code>sqlite3</code></td>
+				</tr>
+								<tr>
+					<td><code>zlib</code></td>
+				</tr>
+								<tr>
+					<td><code>bcmath</code></td>
+				</tr>
+								<tr>
+					<td><code>bz2</code></td>
+				</tr>
+								<tr>
+					<td><code>calendar</code></td>
+				</tr>
+								<tr>
+					<td><code>ctype</code></td>
+				</tr>
+								<tr>
+					<td><code>curl</code></td>
+				</tr>
+								<tr>
+					<td><code>dom</code></td>
+				</tr>
+								<tr>
+					<td><code>fileinfo</code></td>
+				</tr>
+								<tr>
+					<td><code>filter</code></td>
+				</tr>
+								<tr>
+					<td><code>hash</code></td>
+				</tr>
+								<tr>
+					<td><code>json</code></td>
+				</tr>
+								<tr>
+					<td><code>mbstring</code></td>
+				</tr>
+								<tr>
+					<td><code>mcrypt</code></td>
+				</tr>
+								<tr>
+					<td><code>SPL</code></td>
+				</tr>
+								<tr>
+					<td><code>session</code></td>
+				</tr>
+								<tr>
+					<td><code>standard</code></td>
+				</tr>
+								<tr>
+					<td><code>pcntl</code></td>
+				</tr>
+								<tr>
+					<td><code>mysqlnd</code></td>
+				</tr>
+								<tr>
+					<td><code>PDO</code></td>
+				</tr>
+								<tr>
+					<td><code>pdo_mysql</code></td>
+				</tr>
+								<tr>
+					<td><code>pdo_sqlite</code></td>
+				</tr>
+								<tr>
+					<td><code>Phar</code></td>
+				</tr>
+								<tr>
+					<td><code>posix</code></td>
+				</tr>
+								<tr>
+					<td><code>readline</code></td>
+				</tr>
+								<tr>
+					<td><code>Reflection</code></td>
+				</tr>
+								<tr>
+					<td><code>mysqli</code></td>
+				</tr>
+								<tr>
+					<td><code>shmop</code></td>
+				</tr>
+								<tr>
+					<td><code>SimpleXML</code></td>
+				</tr>
+								<tr>
+					<td><code>sockets</code></td>
+				</tr>
+								<tr>
+					<td><code>mysql</code></td>
+				</tr>
+								<tr>
+					<td><code>sysvmsg</code></td>
+				</tr>
+								<tr>
+					<td><code>sysvsem</code></td>
+				</tr>
+								<tr>
+					<td><code>sysvshm</code></td>
+				</tr>
+								<tr>
+					<td><code>tokenizer</code></td>
+				</tr>
+								<tr>
+					<td><code>xml</code></td>
+				</tr>
+								<tr>
+					<td><code>xmlreader</code></td>
+				</tr>
+								<tr>
+					<td><code>xmlwriter</code></td>
+				</tr>
+								<tr>
+					<td><code>xsl</code></td>
+				</tr>
+								<tr>
+					<td><code>zip</code></td>
+				</tr>
+								<tr>
+					<td><code>cgi-fcgi</code></td>
+				</tr>
+								<tr>
+					<td><code>amqp</code></td>
+				</tr>
+								<tr>
+					<td><code>apcu</code></td>
+				</tr>
+								<tr>
+					<td><code>gd</code></td>
+				</tr>
+								<tr>
+					<td><code>iconv</code></td>
+				</tr>
+								<tr>
+					<td><code>memcache</code></td>
+				</tr>
+								<tr>
+					<td><code>memcached</code></td>
+				</tr>
+								<tr>
+					<td><code>redis</code></td>
+				</tr>
+								<tr>
+					<td><code>xhprof</code></td>
+				</tr>
+								<tr>
+					<td><code>mhash</code></td>
+				</tr>
+								<tr>
+					<td><code>apc</code></td>
+				</tr>
+							</table>
+		</div>
+								<h3><a href="#error585122fa9e70benvironment_get" onclick="return koggle('error585122fa9e70benvironment_get')">$_GET</a></h3>
+		<div id="error585122fa9e70benvironment_get" class="collapsed">
+			<table cellspacing="0">
+								<tr>
+					<td><code>genpage</code></td>
+					<td><pre><small>string</small><span>(1)</span> "1"</pre></td>
+				</tr>
+							</table>
+		</div>
+												<h3><a href="#error585122fa9e70benvironment_server" onclick="return koggle('error585122fa9e70benvironment_server')">$_SERVER</a></h3>
+		<div id="error585122fa9e70benvironment_server" class="collapsed">
+			<table cellspacing="0">
+								<tr>
+					<td><code>USER</code></td>
+					<td><pre><small>string</small><span>(9)</span> "zhuguojie"</pre></td>
+				</tr>
+								<tr>
+					<td><code>HOME</code></td>
+					<td><pre><small>string</small><span>(16)</span> "/Users/zhuguojie"</pre></td>
+				</tr>
+								<tr>
+					<td><code>FCGI_ROLE</code></td>
+					<td><pre><small>string</small><span>(9)</span> "RESPONDER"</pre></td>
+				</tr>
+								<tr>
+					<td><code>PATH_INFO</code></td>
+					<td><pre><small>string</small><span>(0)</span> ""</pre></td>
+				</tr>
+								<tr>
+					<td><code>SCRIPT_FILENAME</code></td>
+					<td><pre><small>string</small><span>(35)</span> "/Users/zhuguojie/study/st/index.php"</pre></td>
+				</tr>
+								<tr>
+					<td><code>LOCAL_ENV</code></td>
+					<td><pre><small>string</small><span>(4)</span> "test"</pre></td>
+				</tr>
+								<tr>
+					<td><code>QUERY_STRING</code></td>
+					<td><pre><small>string</small><span>(9)</span> "genpage=1"</pre></td>
+				</tr>
+								<tr>
+					<td><code>REQUEST_METHOD</code></td>
+					<td><pre><small>string</small><span>(3)</span> "GET"</pre></td>
+				</tr>
+								<tr>
+					<td><code>CONTENT_TYPE</code></td>
+					<td><pre><small>string</small><span>(0)</span> ""</pre></td>
+				</tr>
+								<tr>
+					<td><code>CONTENT_LENGTH</code></td>
+					<td><pre><small>string</small><span>(0)</span> ""</pre></td>
+				</tr>
+								<tr>
+					<td><code>SCRIPT_NAME</code></td>
+					<td><pre><small>string</small><span>(10)</span> "/index.php"</pre></td>
+				</tr>
+								<tr>
+					<td><code>REQUEST_URI</code></td>
+					<td><pre><small>string</small><span>(20)</span> "/index.php?genpage=1"</pre></td>
+				</tr>
+								<tr>
+					<td><code>DOCUMENT_URI</code></td>
+					<td><pre><small>string</small><span>(10)</span> "/index.php"</pre></td>
+				</tr>
+								<tr>
+					<td><code>DOCUMENT_ROOT</code></td>
+					<td><pre><small>string</small><span>(25)</span> "/Users/zhuguojie/study/st"</pre></td>
+				</tr>
+								<tr>
+					<td><code>SERVER_PROTOCOL</code></td>
+					<td><pre><small>string</small><span>(8)</span> "HTTP/1.1"</pre></td>
+				</tr>
+								<tr>
+					<td><code>GATEWAY_INTERFACE</code></td>
+					<td><pre><small>string</small><span>(7)</span> "CGI/1.1"</pre></td>
+				</tr>
+								<tr>
+					<td><code>SERVER_SOFTWARE</code></td>
+					<td><pre><small>string</small><span>(11)</span> "nginx/1.8.1"</pre></td>
+				</tr>
+								<tr>
+					<td><code>REMOTE_ADDR</code></td>
+					<td><pre><small>string</small><span>(9)</span> "127.0.0.1"</pre></td>
+				</tr>
+								<tr>
+					<td><code>REMOTE_PORT</code></td>
+					<td><pre><small>string</small><span>(5)</span> "58135"</pre></td>
+				</tr>
+								<tr>
+					<td><code>SERVER_ADDR</code></td>
+					<td><pre><small>string</small><span>(9)</span> "127.0.0.1"</pre></td>
+				</tr>
+								<tr>
+					<td><code>SERVER_PORT</code></td>
+					<td><pre><small>string</small><span>(2)</span> "80"</pre></td>
+				</tr>
+								<tr>
+					<td><code>SERVER_NAME</code></td>
+					<td><pre><small>string</small><span>(9)</span> "me.gz.com"</pre></td>
+				</tr>
+								<tr>
+					<td><code>REDIRECT_STATUS</code></td>
+					<td><pre><small>string</small><span>(3)</span> "200"</pre></td>
+				</tr>
+								<tr>
+					<td><code>HTTP_HOST</code></td>
+					<td><pre><small>string</small><span>(9)</span> "me.gz.com"</pre></td>
+				</tr>
+								<tr>
+					<td><code>HTTP_ACCEPT</code></td>
+					<td><pre><small>string</small><span>(3)</span> "*/*"</pre></td>
+				</tr>
+								<tr>
+					<td><code>PHP_SELF</code></td>
+					<td><pre><small>string</small><span>(10)</span> "/index.php"</pre></td>
+				</tr>
+								<tr>
+					<td><code>REQUEST_TIME_FLOAT</code></td>
+					<td><pre><small>float</small> 1481712378.6293</pre></td>
+				</tr>
+								<tr>
+					<td><code>REQUEST_TIME</code></td>
+					<td><pre><small>integer</small> 1481712378</pre></td>
+				</tr>
+							</table>
+		</div>
+			</div>
+</div>
