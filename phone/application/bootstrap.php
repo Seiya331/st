@@ -193,6 +193,7 @@ if (file_exists(APPPATH . '/cache/weblist.php'))
 //站点跳转
 if ($current_host != $mobile_host && $mobile_host != $main_host)
 {
+
     $current_url = str_replace('/phone', '', $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
     if ($sys_webid != 0)
     {

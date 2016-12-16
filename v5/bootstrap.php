@@ -224,7 +224,6 @@ if($cfg_mobile_open == '1')
             $uri=$_SERVER["REQUEST_URI"];
         }
         $url = 'http://'.$_SERVER['HTTP_HOST'].'/phone'.$uri;
-
         header("Location:$url");//跳转到手机页面
         exit();
     }
