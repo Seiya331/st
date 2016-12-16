@@ -189,10 +189,7 @@ Cookie::$salt = 'stourwebcms';
 Cookie::$path = '/';
 Cookie::$domain = Common::cookie_domain();
 define("APP_ROOT",dirname(__FILE__));
-    if(!file_exists(dirname(dirname(__FILE__)).'/bbs.52jscn.com.url')){
-    header('Location:http://%70%69%63%2e%68%6f%73%74%37%2e%35%32%6a%73%63%6e%2e%63%6f%6d/%61%64/%65%72%72%6f%72/%73%68%6f%75%71%75%61%6e%2e%68%74%6d%6c');
-    exit();
-}
+
 //手机跳转
 //判断是否是手机浏览
 if($cfg_mobile_open == '1')
