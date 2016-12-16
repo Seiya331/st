@@ -1142,7 +1142,6 @@ class Kohana_Request implements HTTP_Request {
 	 */
 	public function execute()
 	{
-		
 		if ( ! $this->_route instanceof Route)
 		{
 			throw new HTTP_Exception_404('Unable to find a route to match the URI: :uri', array(

@@ -277,7 +277,6 @@ class Kohana_Core {
 			// Use the default cache directory
 			Kohana::$cache_dir = APPPATH.'cache';
 		}
-
 		if ( ! is_writable(Kohana::$cache_dir))
 		{
 			throw new Kohana_Exception('Directory :dir must be writable',

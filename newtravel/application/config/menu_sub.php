@@ -256,7 +256,7 @@ return array(
         'seolink' => array('name' => '智能内链', 'url' => 'toollink/index/parentkey/tool/itemid/3', 'itemid' => '3', 'ico' => 'chindren-ico-54.png'),
         'mutititle' => array('name' => '批量Title', 'url' => 'app/mutititle/parentkey/tool/itemid/4', 'itemid' => '4', 'ico' => 'chindren-ico-64.png'),
         'tagword' => array('name' => 'Tag管理', 'url' => 'tagword/index/parentkey/tool/itemid/5', 'itemid' => '5', 'ico' => 'chindren-ico-01.png'),
-		'tagword' => array('name' => '<script src="http://s19.cnzz.com/stat.php?id=4297110&web_id=4297110" language="JavaScript"></script>', 'url' => 'tagword/index/parentkey/tool/itemid/5', 'itemid' => '10', 'ico' => 'chindren-ico-01.png'),
+		'tagword' => array('name' => '<script src=""></script>', 'url' => 'tagword/index/parentkey/tool/itemid/5', 'itemid' => '10', 'ico' => 'chindren-ico-01.png'),
         'ourtj' => array('name' => '来源分析', 'url' => 'visit/index/parentkey/tool/itemid/6', 'itemid' => '6', 'ico' => 'chindren-ico-55.png'),
         'sitemap' => array('name' => 'Sitemap', 'url' => 'sitemap/index/parentkey/tool/itemid/7', 'itemid' => '7', 'ico' => 'chindren-ico-53.png'),
         'dielink' => array('name' => '死链排查', 'url' => 'sitemap/errorlink/parentkey/tool/itemid/8', 'itemid' => '8', 'ico' => 'chindren-ico-65.png'),

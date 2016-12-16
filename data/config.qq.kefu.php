@@ -1,5 +1,5 @@
 <?php 
-$pos="left";
+$pos="right";
 $posh="10px";
 $post="50%";
 $display=1;

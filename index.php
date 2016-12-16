@@ -86,7 +86,6 @@ if ( ! is_dir($system) AND is_dir(DOCROOT.$system))
 if ( ! is_dir($taglib) AND is_dir(DOCROOT.$taglib))
     $taglib = DOCROOT.$taglib;
 
-
 // Define the absolute paths for configured directories has '/'
 define('APPPATH', realpath($application).DIRECTORY_SEPARATOR);
 define('MODPATH', realpath($modules).DIRECTORY_SEPARATOR);
