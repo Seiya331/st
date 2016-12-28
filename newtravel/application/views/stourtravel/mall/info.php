@@ -10,7 +10,7 @@
     <script>
         $(function(){
 
-            console.log("OK");
+            //console.log("OK");
             $('.plug-tab-display').switchTab({
                 titCell:  ".plug-tabnav span",
                 mainCell: ".plug-tabcon",

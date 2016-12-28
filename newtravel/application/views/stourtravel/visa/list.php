@@ -691,7 +691,7 @@ Ext.onReady(
                     } catch (e) {
                     }
                     var height = Ext.dom.Element.getViewportHeight();
-                    // console.log(data_height+'---'+height);
+                    // //console.log(data_height+'---'+height);
                     if (data_height > height - 106) {
                         window.has_biged = true;
                         grid.height = height - 106;

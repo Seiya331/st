@@ -100,7 +100,7 @@
                 url:SITEURL+'ticket/ajax_write_sid',
                 data:{alid:$alid,sid:$sid,key:$key},
                 success:function(data){
-                    console.log(data);
+                    //console.log(data);
                 }
 
             })

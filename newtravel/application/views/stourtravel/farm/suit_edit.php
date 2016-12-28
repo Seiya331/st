@@ -297,7 +297,7 @@
                        form  : "product_frm",
                        success  :  function(response, opts)
                        {
-                           //console.log(response);
+                           ////console.log(response);
 
                            if(response!='no')
                            {

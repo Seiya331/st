@@ -73,7 +73,7 @@ Ext.onReady(
                 afterlayout: function (panel) {
                     var data_height = panel.getView().getEl().down('.x-grid-table').getHeight();
                     var height = Ext.dom.Element.getViewportHeight();
-                    // console.log(data_height+'---'+height);
+                    // //console.log(data_height+'---'+height);
                     if (data_height > height - 130) {
                         window.has_biged = true;
                         panel.height = height - 130;

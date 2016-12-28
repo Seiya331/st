@@ -141,9 +141,7 @@
            <p style="display:block; float:left; height:30px; margin-left:10px; line-height:30px; color:#ff393a; font-size:12px;">
                *模板使用英文字母命名的.zip压缩包上传！
            </p>
-           <a href="#" style="display:block; width:110px; height:30px; float:right;">
-               <img src="{$GLOBALS['cfg_public_url']}images/shangcheng.png" style="border:0;" />
-           </a>
+
        </div>
    </div>
 

@@ -93,7 +93,7 @@
                    success:function(data){
                        total = 0;
                        total = data.total;
-                       //console.log("total:"+total);
+                       ////console.log("total:"+total);
                        mutiDo(channel,keywordtype,0);//分段执行
 
 
@@ -152,7 +152,7 @@
            })
            /* $.post('link_info.php?dopost=get_gen_num',params,function(data){
 
-            //console.log(data);
+            ////console.log(data);
 
 
             },'post');*/

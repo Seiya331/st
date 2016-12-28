@@ -130,7 +130,7 @@
         },
         errUserFunc:function(element){
 
-           console.log(element);
+           //console.log(element);
         },
         submitHandler:function(form){
 

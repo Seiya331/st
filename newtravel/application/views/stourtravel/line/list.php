@@ -1074,7 +1074,7 @@
   //设置多个线路的目的地
   function setDests(result,bool)
   {
-      console.log(result);
+      //console.log(result);
       if(!bool)
          return;
       var ids=[];

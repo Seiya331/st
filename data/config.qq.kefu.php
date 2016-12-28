@@ -1,7 +1,7 @@
 <?php 
-$pos="left";
+$pos="right";
 $posh="10px";
 $post="50%";
-$display=1;
+$display=0;
 $qqcl="4";
 $phonenum="123456";

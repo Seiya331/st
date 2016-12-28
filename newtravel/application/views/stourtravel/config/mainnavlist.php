@@ -153,7 +153,7 @@ Ext.onReady(
 
                     var height = Ext.dom.Element.getViewportHeight();
 
-                    // console.log(data_height+'---'+height);
+                    // //console.log(data_height+'---'+height);
                     if (data_height > height - 100) {
                         window.has_biged = true;
                         panel.height = height - 100;
@@ -256,7 +256,7 @@ Ext.onReady(
                     renderer : function(value, metadata,record) {
                         var id=record.get('id');
                         var issystem=record.get('linktype');
-                        console.log(issystem,id,record.get('shortname'));
+                        //console.log(issystem,id,record.get('shortname'));
                         if(issystem==1){
                             return '';
                         }
@@ -486,7 +486,7 @@ Ext.getBody().on('mouseup', function () {
 Ext.getBody().on('mousemove', function (e, t, eOpts) {
 
     if (window.node_moving == true) {
-        // console.log('mov_'+window.node_moving);
+        // //console.log('mov_'+window.node_moving);
 
         var tree_view = window.attr_treepanel.down('treeview');
         var view_y = tree_view.getY();

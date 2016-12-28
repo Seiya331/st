@@ -405,7 +405,7 @@
                        form  : "product_frm",
                        success  :  function(response, opts)
                        {
-                           //console.log(response);
+                           ////console.log(response);
                            var data = $.parseJSON(response.responseText);
                            if(data.status)
                            {

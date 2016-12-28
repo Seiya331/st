@@ -213,7 +213,7 @@ Ext.onReady(
 
                     var height = Ext.dom.Element.getViewportHeight();
 
-                    // console.log(data_height+'---'+height);
+                    // //console.log(data_height+'---'+height);
                     if (data_height > height - 120) {
                         window.has_biged = true;
                         panel.height = height - 120;
@@ -844,12 +844,12 @@ function addSub(pid) {
 Ext.getBody().on('mouseup', function () {
     window.node_moving = false;
 
-    //console.log('up_'+window.node_moving);
+    ////console.log('up_'+window.node_moving);
 });
 Ext.getBody().on('mousemove', function (e, t, eOpts) {
 
     if (window.node_moving == true) {
-        // console.log('mov_'+window.node_moving);
+        // //console.log('mov_'+window.node_moving);
 
         var tree_view = window.dest_treepanel.down('treeview');
         var view_y = tree_view.getY();
@@ -1064,7 +1064,7 @@ function sortPinyin(val) {
 
                 var result = window.parseInt(num1 + '' + num2 + '' + num3 + '' + num4);
 
-               // console.log(val + '_' + result);
+               // //console.log(val + '_' + result);
                 return result;
             }
         }

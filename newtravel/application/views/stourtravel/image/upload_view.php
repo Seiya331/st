@@ -100,7 +100,7 @@
                 $('#'+file.id).find('.closed').remove();
             },
             Error: function (up, err) {
-                console.log(err.message);
+                //console.log(err.message);
             },
             UploadComplete:function(uploader,files){
               $('.photo_pic_con').html('<div class="upload_success">上传成功'+files.length+'张照片</div>');

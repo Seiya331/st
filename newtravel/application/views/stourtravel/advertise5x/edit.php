@@ -267,7 +267,7 @@
         $('#custom_label').blur(function(){
             var data={};
             var bool=false;
-            var val=$(this).val();console.log(val.length);
+            var val=$(this).val();//console.log(val.length);
             if(val.length <1){
                 return bool;
             }

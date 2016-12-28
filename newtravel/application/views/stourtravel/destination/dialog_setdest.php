@@ -100,7 +100,7 @@
         $(document).on('click','#reverse_select',function(){
             var obj=$('#content_area').find('.con-one:last');
             obj.find('.lb-box').each(function(){
-                var id=$(this).val();console.log(id);
+                var id=$(this).val();//console.log(id);
                 if($(this).is(':checked'))
                 {
                     unchooseOne(id);

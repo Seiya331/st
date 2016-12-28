@@ -552,7 +552,7 @@ function modify(id) {
 }
  $('.switch-img').each(function(){
      $(this).click(function(){
-         console.log($(this).attr('src'));
+         //console.log($(this).attr('src'));
      });
  });
 
@@ -570,8 +570,8 @@ function modify(id) {
             bool=close;
         }
         $.get(SITEURL+'advertise5x/ajax_statu',{statu:statu,id:obj.attr('data-id')},function(rs){
-            console.log(rs);
-            if(rs==1){console.log(bool);
+            //console.log(rs);
+            if(rs==1){//console.log(bool);
                 obj.attr('src',bool);
             }
         },'json');

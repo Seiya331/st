@@ -166,7 +166,7 @@
                 $('#'+file.id).find('.progress').html('<s style=" width:'+file.percent+'%"></s><b>'+file.percent+'%</b>');
             },
             Error: function(up, err) {
-               console.log(err.message);
+               //console.log(err.message);
            }
         }
     });

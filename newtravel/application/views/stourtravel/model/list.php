@@ -266,7 +266,7 @@
                            getClass: function(v, meta, rec) {          // Or return a class from a function
 
                                var issys = rec.get('issystem');
-                               console.log(issys);
+                               //console.log(issys);
                                if(issys==0){
                                    if(v==1){
                                        return 'dest-status-ok';

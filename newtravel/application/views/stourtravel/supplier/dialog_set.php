@@ -77,7 +77,7 @@
                     oneStep=parseInt(oneStep);
                     if(oneStep>=oldStep)
                         $(element).remove();
-                });//console.log(data['nextlist']);
+                });////console.log(data['nextlist']);
                 if(typeof(data)=='object') {
                     var html = "<div class='con-one main-body' step='" + step + "'><ul>";
                     var lastIndex=0;

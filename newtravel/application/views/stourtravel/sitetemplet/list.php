@@ -115,7 +115,7 @@ Ext.onReady(
 
                     var height = Ext.dom.Element.getViewportHeight();
 
-                    // console.log(data_height+'---'+height);
+                    // //console.log(data_height+'---'+height);
                     if (data_height > height - 100) {
                         window.has_biged = true;
                         panel.height = height - 100;

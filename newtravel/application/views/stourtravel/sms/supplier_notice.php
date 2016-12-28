@@ -66,7 +66,6 @@
             var url = SITEURL+"config/ajax_saveconfig";
             var frmdata = $("#supplier_configfrm").serialize();
             var frmdata = frmdata+"&webid=0";
-            console.log()
             $.ajax({
                 type:'POST',
                 url:url,

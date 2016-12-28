@@ -273,7 +273,7 @@
                        form  : "product_frm",
                        success  :  function(response, opts)
                        {
-                           //console.log(response);
+                           ////console.log(response);
                            var data = response.responseText;
                            if(data!='no')
                            {

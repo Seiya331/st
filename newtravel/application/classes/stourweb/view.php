@@ -60,8 +60,7 @@ class Stourweb_View {
 
         try
         {
-            $to = APPPATH.'/cache/tplcache/'.$this->_templet.'.php';
-
+            $to = rtrim(APPPATH,'\/').'/cache/tplcache/'.$this->_templet.'.php';
             $isfileto = is_file($to);
             if(!$isfileto || filemtime($kohana_view_filename) > filemtime($to) || (filesize($to) == 0 && filesize($kohana_view_filename) > 0) || MODE==1)
             {
@@ -506,7 +505,6 @@ class Stourweb_View {
      * */
     public function write_file($filename, $data)
     {
-
         $filearr= explode('/',$filename); //拆分路径,创建模板对应目录
         array_pop($filearr);
         $folder = implode('/',$filearr);

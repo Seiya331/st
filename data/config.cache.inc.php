@@ -11,7 +11,7 @@ $cfg_indexcode = ' <meta name="keywords" content="愉途主题旅游网,自助�
 ';
 $cfg_gonggao = '<p>愉途主题旅游网</p>';
 $cfg_tongjicode = '';
-$cfg_df_style = 'default';
+$cfg_df_style = 'smore';
 $cfg_weathcode = '  ';
 $cfg_beian = '';
 $cfg_powerby = '思途旅游网';
@@ -52,7 +52,7 @@ $cfg_logoalt = '思途旅游CMS';
 $cfg_alipay_signtype = 'cash';
 $cfg_py_open = '1';
 $cfg_supplier_msg = '1';
-$cfg_index_templet = 'index_1.htm';
+$cfg_index_templet = 'index_3.htm';
 $cfg_auto_time = '';
 $cfg_phone = '1234567';
 $cfg_mobile_phone = '1234567';
@@ -102,4 +102,5 @@ $cfg_m_phone = '';
 $cfg_m_icp = '';
 $cfg_m_tongjicode = '';
 $cfg_footer = '<p>愉途主题旅游网站</p>';
+$cfg_usernav_open = '1';
 ?>

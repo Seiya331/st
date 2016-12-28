@@ -111,14 +111,14 @@
     }
     function get_params(obj) {
         obj.keyword = $('#app-keyword').val();
-        obj.type = $('#app-tag').find('.active').attr('data');console.log(obj);
+        obj.type = $('#app-tag').find('.active').attr('data');//console.log(obj);
         return obj;
     }
     //点击分页
     $("#page a").live('click', function () {
         baseParam.page = $(this).attr('page');
         baseParam = get_params(baseParam);
-        console.log(baseParam);
+        //console.log(baseParam);
         get_data(baseParam);
     });
     //标签切换

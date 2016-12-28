@@ -120,7 +120,7 @@
                 },
                 success: function(data)
                 {
-                    console.log(data.status);
+                    //console.log(data.status);
                     if(data.status=='1')
                     {
                         ST.Util.hideMsgBox();
@@ -150,7 +150,7 @@
                 },
                 success: function(data)
                 {
-                    console.log(data.status);
+                    //console.log(data.status);
                     if(data.status=='1')
                     {
                         ST.Util.hideMsgBox();
