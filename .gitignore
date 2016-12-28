@@ -4,3 +4,4 @@ uploads/
 .idea/
 /data/thumb/
 !/core/modules/cache/
+!/min/lib/Minify/Cache/
