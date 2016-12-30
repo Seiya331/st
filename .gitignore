@@ -1,7 +1,8 @@
-cache/
 logs/
 uploads/
 .idea/
 /data/thumb/
-!/core/modules/cache/
-!/min/lib/Minify/Cache/
+/v5/cache/config.me.php
+/v5/cache/html/
+/v5/cache/tplcache/
+/newtravel/application/cache/tplcache/
