@@ -1,11 +1,8 @@
 logs/
-uploads/
+
 .idea/
 /data/thumb/
 /v5/cache/config.me.php
 /v5/cache/html/
 /v5/cache/tplcache/
 /newtravel/application/cache/tplcache/
-!/uploads/icon/
-!/uploads/arcimgs/
-!/uploads/main/
